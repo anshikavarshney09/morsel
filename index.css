@@ -1,0 +1,266 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --navbar-height:59px
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    top: 0px;
+    z-index: 1000;
+
+} 
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 85%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#logo{
+    margin: 15px 35px;
+}
+
+#logo img{
+    height: 40px;
+    margin: 0px 20px;
+
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+  width: 100%;
+}
+
+li{
+    
+    list-style:none ;
+    font-size: 1.5rem;
+}
+a{
+    color: white;
+    display: block;
+    padding: 3.5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+}
+a:hover{
+    color: black;
+    background-color: aqua;
+    transform: scale(1.05);
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+     height: 548px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('../real.jpeg') no-repeat center center/cover;
+     top:0px;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.79;
+}
+#home h1{
+    color: white;
+    text-align: center;
+}
+#home p{
+     color: rgb(255, 255, 255);
+    text-align: center;
+    font-size:1.2rem;
+    font-family: sans-serif;
+}
+#Services{
+    margin: 29px;
+    display: flex;
+
+
+}
+#Services .box{
+    border: 2px solid brown;
+    padding: 30px;
+    margin: 23px 45px;
+    border-radius: 23px;
+    background-color:burlywood;
+    margin-bottom: 30px;
+}
+#Services .box img{
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+#client-sec{
+   margin-bottom: 30px;
+    position: relative;
+}
+#client-sec::before{
+   content: "";
+   position:absolute;
+   background: url('../bg2.webp');
+   width: 100%;
+   height: 100%;
+   z-index: -4;
+   opacity: 0.55;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.client-item{
+    padding: 28px;
+}
+#Clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Clients img{
+    height: 128px;
+}
+#contact{
+     position: relative;
+
+}
+#contact::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+
+}
+#contact-box form{
+    width: 45%;
+}
+#contact-box label{
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer{
+    background-color: black;
+    color: beige;
+    padding: 9px 20px;
+}
+.Primary{
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 4.2rem;
+    padding: 15px;
+
+}
+.sec{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.1rem;
+    padding: 12px;
+  
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(157, 70, 33);
+    color: white;
+    margin: 18px;
+    font-size: 1.25rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.btn:hover {
+  background-color: #ff944d;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.center{
+    text-align: center;
+}
+@media screen and (max-width: 1170px){
+      body {
+  overflow-x: hidden;
+}
+    #navbar{
+        flex-direction: column;
+         align-items: center;
+    gap: 10px;
+  
+    }
+    #navbar ul li a{
+        font-size: 1rem;
+        padding: 0px 7px;
+        padding-bottom: 8px;
+    }
+    #home{
+        height: 380px;
+        padding: 3px 15px;
+    }
+    #home::before{
+        height: 480px;
+    }
+    #home p{
+        font-size: 12px;
+    }
+    
+    #Services{
+        flex-direction: column;
+    }
+    #Services .box{
+    padding: 14px;
+    margin: 2px 0px;
+    margin-bottom: 30px;
+    }
+    #Clients{
+        flex-wrap: wrap;
+    }
+    #Clients img{
+        width: 66px;
+        padding: 6px;
+        height: auto;
+    }
+    #contact-box form{
+        width: 75%
+    }
+    .Primary{
+        font-size: 2rem;
+    }
+    .btn{
+        font-size: 1rem;
+        padding: 4px 8px;
+    }
+  
+}
