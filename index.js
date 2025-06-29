@@ -1,1 +1,1 @@
-alert("FOOOOOD");
+prompt("enter your name");
